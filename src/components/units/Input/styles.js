@@ -3,7 +3,7 @@ import Colors from 'theme/Colors'
 
 export const StyledInput = styled.input`
     width: 18.6rem;
-    height: 1.5rem;
+    height: 1.1rem;
     border-radius: 5px;
     border: 1px solid #dddddd;
     display: block;

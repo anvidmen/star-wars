@@ -80,14 +80,44 @@ const Register = ({ retrieveUser }) => {
       <Container>
         <Form onSubmit={handleSubmit}>
           <div className='classInput'>
+            <label>Name</label>
+            <Input
+              type='text'
+              placeholder='Enter your name'
+              value={password}
+              onChange={(e) => handlePasswordChange(e.target.value)}
+              id='nameId'
+              name='name'
+              error={isPassError}
+              errorText='The password to contain more than 6 characters and a uppercase letter'
+              disabled={disabled}
+              minLength={6}
+            />
+          </div>
+          <div className='classInput'>
+            <label>Surname</label>
+            <Input
+              type='surname'
+              placeholder='Enter your surname'
+              value={password}
+              onChange={(e) => handlePasswordChange(e.target.value)}
+              id='surnameId'
+              name='surname'
+              error={isPassError}
+              errorText='The password to contain more than 6 characters and a uppercase letter'
+              disabled={disabled}
+              minLength={6}
+            />
+          </div>
+          <div className='classInput'>
             <label>Email</label>
             <Input
               type='email'
               placeholder='Enter your email'
               value={email}
               onChange={(e) => handleEmailChange(e.target.value)}
-              id='emailName'
-              name='emailName'
+              id='emailId'
+              name='email'
               error={isEmailError}
               errorText='Enter a valid email address...'
               disabled={disabled}
@@ -100,8 +130,8 @@ const Register = ({ retrieveUser }) => {
               placeholder='Enter your password'
               value={password}
               onChange={(e) => handlePasswordChange(e.target.value)}
-              id='passName'
-              name='passName'
+              id='passwordId'
+              name='password'
               error={isPassError}
               errorText='The password to contain more than 6 characters and a uppercase letter'
               disabled={disabled}
